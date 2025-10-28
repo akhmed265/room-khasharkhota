@@ -5,8 +5,12 @@
 </template>
 
 <script setup lang="ts">
-  import Start from './sections/start.vue'
+  import Start from './sections/Start.vue'
 </script>
-<style scoped lang="scss">
-
+<style lang="scss">
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 </style>
