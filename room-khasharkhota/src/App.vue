@@ -3,12 +3,15 @@
     <Start />
 
     <About />
+
+    <Offer />
   </div>
 </template>
 
 <script setup lang="ts">
   import Start from './sections/Start.vue'
   import About from './sections/About.vue'
+  import Offer from './sections/Offer.vue'
 
 </script>
 <style lang="scss">

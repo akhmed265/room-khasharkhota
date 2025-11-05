@@ -93,6 +93,7 @@ import Button from "@/components/UI/Button.vue";
         color: $text-color;
         font-weight: 400;
         margin-bottom: 40px;
+        line-height: 150%;
       }
     }
   }
