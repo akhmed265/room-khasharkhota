@@ -146,8 +146,8 @@ const handleSubmit = () => {
       align-items: center;
       gap: 24px;
       list-style: none;
-      margin-left: 212px;
-      margin-right: 49px;
+      margin-left: 193px;
+      margin-right: 35px;
     }
 
     .nav__link {
@@ -155,6 +155,7 @@ const handleSubmit = () => {
       color: $secondary-color;
       font-weight: 600;
       text-decoration: none;
+      white-space: nowrap;
 
       &:hover {
         color: $yellow-color;
