@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <Start />
-
     <About />
-
     <Offer />
+    <Popular />
   </div>
 </template>
 
@@ -12,6 +11,7 @@
   import Start from './sections/Start.vue'
   import About from './sections/About.vue'
   import Offer from './sections/Offer.vue'
+  import Popular from './sections/Popular.vue'
 
 </script>
 <style lang="scss">
