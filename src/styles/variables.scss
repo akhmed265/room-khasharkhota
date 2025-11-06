@@ -1,0 +1,40 @@
+// Шрифты
+$font-custom: "NextArt", serif;
+$font-nunito: "Nunito Sans", sans-serif;
+
+// Цвета
+$secondary-color: #fdfdfd;
+$text-color: #18121e;
+$yellow-color: #f2be22;
+$green-color: #1a3e3e;
+$background-color: #f3f5f4;
+$black-color: #000000;
+
+// Размеры
+$font-small: 14px;
+$font-input: 16px;
+$font-nav: 18px;
+$font-medium: 24px;
+$font-large: 32px;
+
+.subtitle {
+  font-size: $font-medium;
+  color: $yellow-color;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: $font-large;
+  color: $text-color;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: $font-nav;
+  color: $text-color;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 150%;
+}

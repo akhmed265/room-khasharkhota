@@ -13,10 +13,10 @@
 
         <div class="about__content">
           <p class="about__subtitle subtitle">о нашем походе</p>
-          <h2 class="about__title">
+          <h2 class="about__title title">
             Исследуйте все горные массивы мира вместе с нами
           </h2>
-          <p class="about__text">
+          <p class="about__text text">
             Его корни уходят в один фрагмент классической латыни 45 года н. э.,
             то есть более двух тысячелетий назад. Ричард МакКлинток, профессор
             латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из
@@ -74,27 +74,6 @@ import Button from "@/components/UI/Button.vue";
 
     .about__content {
       padding: 64px 0;
-      .about__subtitle {
-        font-size: $font-medium;
-        color: $yellow-color;
-        font-weight: 400;
-        margin-bottom: 8px;
-      }
-
-      .about__title {
-        font-size: $font-large;
-        color: $text-color;
-        font-weight: 800;
-        margin-bottom: 40px;
-      }
-
-      .about__text {
-        font-size: $font-nav;
-        color: $text-color;
-        font-weight: 400;
-        margin-bottom: 40px;
-        line-height: 150%;
-      }
     }
   }
 }

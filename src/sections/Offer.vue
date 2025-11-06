@@ -96,28 +96,6 @@ import Button from "@/components/UI/Button.vue";
       .offer__content {
         margin-right: 90px;
 
-        .offer__subtitle {
-          font-size: $font-medium;
-          color: $yellow-color;
-          font-weight: 400;
-          margin-bottom: 8px;
-        }
-
-        .offer__title {
-          font-size: $font-large;
-          color: $text-color;
-          font-weight: 800;
-          margin-bottom: 40px;
-        }
-
-        .offer__text {
-          font-size: $font-nav;
-          color: $text-color;
-          font-weight: 400;
-          margin-bottom: 40px;
-          line-height: 150%;
-        }
-
         .offer__list {
           list-style: none;
 
