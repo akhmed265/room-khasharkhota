@@ -4,6 +4,8 @@
     <About />
     <Offer />
     <Popular />
+    <Blog />
+
   </div>
 </template>
 
@@ -12,6 +14,7 @@
   import About from './sections/About.vue'
   import Offer from './sections/Offer.vue'
   import Popular from './sections/Popular.vue'
+  import Blog from './sections/Blog.vue'
 
 </script>
 <style lang="scss">
