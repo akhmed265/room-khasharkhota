@@ -57,7 +57,7 @@
         </li>
       </ul>
 
-      <Button variant="dark-to-light" type="button" class="popular__btn">
+      <Button variant="dark-to-light" type="button" class="gallery__btn">
         Наш pinterest
       </Button>
     </div>

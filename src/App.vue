@@ -6,6 +6,8 @@
     <Popular />
     <Blog />
     <Gallery />
+    <Newsletter />
+    <Footer />
 
   </div>
 </template>
@@ -17,6 +19,8 @@
   import Popular from './sections/Popular.vue'
   import Blog from './sections/Blog.vue'
   import Gallery from './sections/Gallery.vue'
+  import Newsletter from './sections/Newsletter.vue'
+  import Footer from './sections/Footer.vue'
 
 </script>
 <style lang="scss">

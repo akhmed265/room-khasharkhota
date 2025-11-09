@@ -85,7 +85,7 @@
           </div>
         </li>
       </ul>
-      <Button variant="dark-to-light" type="button" class="popular__btn">
+      <Button variant="dark-to-light" type="button" class="blog__btn">
         Рейтинг направлений
       </Button>
     </div>
