@@ -153,6 +153,11 @@ import Button from "@/components/UI/Button.vue";
         }
       }
     }
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 </style>

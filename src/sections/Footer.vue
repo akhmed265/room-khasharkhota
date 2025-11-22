@@ -235,6 +235,10 @@
 
                 &:hover {
                   color: $yellow-color;
+
+                  &::before {
+                    background-image: url(../assets/icons/footer-arrow-yellow.svg);
+                  }
                 }
 
                 &::before {
@@ -273,6 +277,11 @@
           }
         }
       }
+
+      @media (max-width: 1100px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
 
@@ -301,6 +310,11 @@
             color: $yellow-color;
           }
         }
+      }
+
+      @media (max-width: 1100px) {
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }

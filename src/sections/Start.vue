@@ -3,9 +3,22 @@
     <div class="container">
       <header class="header">
         <a href="" class="header__logo">
-          <img src="../assets/image/logo.svg" alt="Logo" />
+          <img
+            src="../assets/image/logo.svg"
+            alt="Logo"
+            class="header__logo-img"
+          />
         </a>
-        <nav class="header__nav">
+
+        <button
+          class="burger"
+          :class="{ 'burger--active': isMenuOpen }"
+          @click="toggleMenu"
+        >
+          <img src="@/assets/icons/burger.svg" alt="бургер" />
+        </button>
+
+        <nav class="header__nav" :class="{ 'header__nav--active': isMenuOpen }">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="" class="nav__link"> Главная </a>
@@ -26,8 +39,14 @@
               <a href="" class="nav__link"> Контакты </a>
             </li>
           </ul>
+
+          <button class="close" @click="toggleMenu">
+            <img src="@/assets/icons/close.svg" alt="закрыть" />
+          </button>
         </nav>
-        <Button variant="dark-to-light" type="button"> Консультация </Button>
+        <Button variant="dark-to-light" type="button" class="header__btn">
+          Консультация
+        </Button>
       </header>
 
       <div class="start__info">
@@ -117,6 +136,17 @@ const form = ref<SearchForm>({
   quantity: "",
 });
 
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  if (isMenuOpen.value) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+};
+
 const handleSubmit = () => {
   console.log("Данные формы:", form.value);
 };
@@ -134,32 +164,113 @@ const handleSubmit = () => {
   .container {
     padding-right: 370px;
     padding-left: 370px;
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .header {
     display: flex;
     align-items: center;
     padding-top: 16px;
+    position: relative;
 
-    .nav__list {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      list-style: none;
-      margin-left: 193px;
-      margin-right: 35px;
+    .header__nav {
+      .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+        margin-left: 193px;
+        margin-right: 35px;
+
+        @media (max-width: 1100px) {
+          align-items: flex-start;
+          flex-direction: column;
+          margin: 0;
+          gap: 24px;
+        }
+      }
+
+      .nav__link {
+        font-size: $font-nav;
+        color: $secondary-color;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          color: $yellow-color;
+        }
+      }
+
+      .close {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
+
+        @media (max-width: 1100px) {
+          display: block;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $green-color;
+        backdrop-filter: blur(100px);
+        transform: translateX(-150%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        padding: 45px 16px 50px;
+
+        &--active {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
-    .nav__link {
-      font-size: $font-nav;
-      color: $secondary-color;
-      font-weight: 600;
-      text-decoration: none;
-      white-space: nowrap;
+    .burger {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
 
-      &:hover {
-        color: $yellow-color;
+      @media (max-width: 1100px) {
+        display: flex;
       }
+
+      &--active {
+        display: none;
+      }
+    }
+
+    &__btn {
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      justify-content: space-between;
     }
   }
 
@@ -213,6 +324,10 @@ const handleSubmit = () => {
             background-color: $secondary-color;
             color: $green-color;
           }
+
+          @media (max-width: 1100px) {
+            min-width: 234px;
+          }
         }
       }
 
@@ -244,6 +359,12 @@ const handleSubmit = () => {
       .search__btn {
         width: 100%;
         height: 52px;
+        padding: 15px;
+
+        @media (max-width: 1100px) {
+          height: 47px;
+          padding: 15px;
+        }
       }
 
       .start__span {

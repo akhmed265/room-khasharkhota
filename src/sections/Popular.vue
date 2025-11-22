@@ -166,10 +166,11 @@ import Button from "@/components/UI/Button.vue";
 
       .popular__item {
         position: relative;
-        width: 380;
-        height: 500;
+        width: 380px;
+        height: 500px;
         border-radius: 32px;
         overflow: hidden;
+        object-fit: cover;
 
         &:hover .overlay {
           top: 0;
@@ -249,7 +250,25 @@ import Button from "@/components/UI/Button.vue";
             height: 44px;
           }
         }
+        @media (max-width: 1100px) {
+          max-width: 350px;
+          height: 450px;
+        }
+
+        .popular__img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
       }
+      @media (max-width: 1100px) {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }

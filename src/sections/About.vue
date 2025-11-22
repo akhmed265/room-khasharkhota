@@ -45,6 +45,11 @@ import Button from "@/components/UI/Button.vue";
 
   .container {
     padding: 100px 370px;
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &__wrapper {
@@ -69,6 +74,10 @@ import Button from "@/components/UI/Button.vue";
         top: 126px;
         left: 130px;
         object-fit: cover;
+      }
+
+      @media (max-width: 1100px) {
+        margin-right: 180px;
       }
     }
 

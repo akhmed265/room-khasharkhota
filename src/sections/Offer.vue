@@ -124,18 +124,27 @@ import Button from "@/components/UI/Button.vue";
             }
           }
         }
+
+        @media (max-width: 1100px) {
+          margin-right: 15px;
+        }
       }
       .offer__media {
-          display: grid;
-          grid-template-columns: repeat(2, 250px);
-          align-content: center;
-          gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        align-content: center;
+        gap: 10px;
 
-          .offer__img {
-            height: 250px;
-            width: 250px;
-          }
+        .offer__img {
+          height: 250px;
+          width: 250px;
         }
+      }
+    }
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }

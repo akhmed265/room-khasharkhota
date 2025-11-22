@@ -117,6 +117,11 @@ import Button from "@/components/UI/Button.vue";
       row-gap: 24px;
       margin-bottom: 50px;
       list-style: none;
+
+      @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, 530px);
+        gap: 20px;
+      }
     }
 
     .news__item {
@@ -132,6 +137,11 @@ import Button from "@/components/UI/Button.vue";
         height: 280px;
         border-radius: 6px;
         object-fit: cover;
+
+        @media (max-width: 1100px) {
+          width: 220px;
+          height: 290px;
+        }
       }
 
       .news__content {
@@ -191,6 +201,11 @@ import Button from "@/components/UI/Button.vue";
           }
         }
       }
+    }
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }

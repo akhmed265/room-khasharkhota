@@ -90,20 +90,29 @@ import Button from "@/components/UI/Button.vue";
           margin-bottom: 8px;
         }
 
-        .newsletter__input {
-          font-size: $font-small;
-          color: $text-color;
-          font-weight: 300;
-          border-radius: 4px;
-          border: none;
-          background-color: $background-color;
-          width: 280px;
-          margin-right: 16px;
-          padding: 12px 16px;
-        }
+        .newsletter__form {
+          @media (max-width: 1100px) {
+            display: flex;
+          }
+          .newsletter__input {
+            font-size: $font-small;
+            color: $text-color;
+            font-weight: 300;
+            border-radius: 4px;
+            border: none;
+            background-color: $background-color;
+            width: 280px;
+            margin-right: 16px;
+            padding: 12px 16px;
+          }
 
-        .newsletter__btn {
-          padding: 11px 24px;
+          .newsletter__btn {
+            padding: 11px 24px;
+
+            @media (max-width: 1100px) {
+              padding: 11px 24px;
+            }
+          }
         }
 
         .newsletter__terms {
@@ -118,6 +127,15 @@ import Button from "@/components/UI/Button.vue";
           }
         }
       }
+
+      @media (max-width: 1100px) {
+      padding: 40px;
+    }
+    }
+
+    @media (max-width: 1100px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
